@@ -6,23 +6,36 @@
 #include "iostream"
 
 void Plane::fly(Route route) {
-    cout << "Initial takeoff" << endl;
+    cout << "Welcome on board flight " << flightNumber << ". Our journey will have " << route.stops.size() - 1
+         << " stop(s) and will take us roughly " << route.durationMin << " minutes. " << endl;
     int index = 0;
     for (Stop stop : route.stops) {
-        cout << "landing at" << stop.stopName << endl;
+        if (index > 0) {
+            cout << "landing at " << stop.stopName << endl;
+        }
         if (index < route.stops.size() - 1) {
             cout << "Taking off from " << stop.stopName << endl;
         }
         index++;
     }
-    cout << "Last landing of trip is complete" << endl;
+    cout << "Our journey has ended." << endl;
+    printCharacteristics();
 }
 
-Plane::Plane(int flightNumber, int passengersCount, int maxAltitude, int maxSpeed, int maxDistance) : AirTransport(
+Plane::Plane(Pilot pilot, int flightNumber, int passengersCount, int maxAltitude, int maxSpeed, int maxDistance)
+        : AirTransport(
+        pilot,
         passengersCount,
         maxAltitude, maxSpeed,
         maxDistance) {
     this->flightNumber = flightNumber;
+}
+
+void Plane::printCharacteristics() {
+    AirTransport::printCharacteristics();
+    printf("Your pilot was %s. He has over %d years of flying experience",
+           AirTransport::getTransportOperator().name,
+           AirTransport::getTransportOperator().yearsExp);
 }
 
 

@@ -5,16 +5,17 @@
 #ifndef TRANSPORTATION_TRANSPORT_H
 #define TRANSPORTATION_TRANSPORT_H
 
-#include "Route.h"
 
+#include "Operator.h"
 
 class Transport {
 public:
-    Route rout = NULL;
     int passengersCount;
-    Transport(int passengersCount);
+    Operator transportOperator = Operator(nullptr, 0);
 
-    void setRout(const Route &rout);
+    Transport(Operator transportOperator, int passengersCount);
+
+    virtual Operator getTransportOperator();
 };
 
 

@@ -13,9 +13,11 @@
 class Plane : public AirTransport {
 public:
 
-    Plane(int flightNumber, int passengersCount, int maxAltitude, int maxSpeed, int maxDistance);
+    Plane(Pilot pilot, int flightNumber, int passengersCount, int maxAltitude, int maxSpeed, int maxDistance);
 
     void fly(Route route) override;
+
+    void printCharacteristics() override;
 
 private:
     int flightNumber;

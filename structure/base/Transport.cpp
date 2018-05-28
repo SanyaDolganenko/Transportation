@@ -4,11 +4,12 @@
 
 #include "Transport.h"
 
-Transport::Transport(int passengersCount) : passengersCount(passengersCount) {
+
+Transport::Transport(Operator transportOperator, int passengersCount) {
+    this->transportOperator = transportOperator;
+    this->passengersCount = passengersCount;
 }
 
-void Transport::setRout(const Route &rout) {
-    Transport::rout = rout;
+Operator Transport::getTransportOperator() {
+    return transportOperator;
 }
-
-

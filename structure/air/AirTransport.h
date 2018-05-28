@@ -8,6 +8,7 @@
 
 #include "Flyable.h"
 #include "../base/Transport.h"
+#include "Pilot.h"
 
 class AirTransport : public Flyable, Transport {
 public:
@@ -15,8 +16,11 @@ public:
     int maxSpeed;
     int maxDistance;
 
-    AirTransport(int passengersCount, int maxAltitude, int maxSpeed, int maxDistance);
+    AirTransport(Pilot pilot, int passengersCount, int maxAltitude, int maxSpeed, int maxDistance);
 
+    virtual void printCharacteristics();
+
+    Operator getTransportOperator() override;
 };
 
 
