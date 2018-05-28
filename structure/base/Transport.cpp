@@ -7,7 +7,7 @@
 Transport::Transport(int passengersCount) : passengersCount(passengersCount) {
 }
 
-void Transport::setRout(const Rout &rout) {
+void Transport::setRout(const Route &rout) {
     Transport::rout = rout;
 }
 

@@ -3,4 +3,4 @@ project(Transportation)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(Transportation main.cpp structure/Transport.cpp structure/Transport.h structure/Rout.cpp structure/Rout.h structure/Stop.cpp structure/Stop.h)
+add_executable(Transportation main.cpp structure/base/Transport.cpp structure/base/Transport.h structure/base/Route.cpp structure/base/Route.h structure/base/Stop.cpp structure/base/Stop.h structure/air/Flyable.cpp structure/air/Flyable.h implementation/air/Plane.cpp implementation/air/Plane.h structure/air/AirTransport.cpp structure/air/AirTransport.h)

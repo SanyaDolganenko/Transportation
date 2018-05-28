@@ -10,12 +10,12 @@
 
 using namespace std;
 
-class Rout {
+class Route {
 public:
     vector<Stop> stops;
     int durationMin;
 
-    Rout(const vector<Stop> &stops, int durationMin);
+    Route(const vector<Stop> &stops, int durationMin);
 };
 
 

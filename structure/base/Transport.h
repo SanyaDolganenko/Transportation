@@ -5,16 +5,16 @@
 #ifndef TRANSPORTATION_TRANSPORT_H
 #define TRANSPORTATION_TRANSPORT_H
 
-#include "Rout.h"
+#include "Route.h"
 
 
 class Transport {
 public:
-    Rout rout = NULL;
+    Route rout = NULL;
     int passengersCount;
     Transport(int passengersCount);
 
-    void setRout(const Rout &rout);
+    void setRout(const Route &rout);
 };
 
 
