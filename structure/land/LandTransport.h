@@ -15,7 +15,7 @@ public:
 
     LandTransport(Operator driver, int passengersCount, char *transportName);
 
-    virtual void printCharacteristics();
+    void printCharacteristics() override;
 };
 
 

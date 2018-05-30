@@ -12,6 +12,7 @@ AirTransport::AirTransport(Operator pilot, int passengersCount,
                     passengersCount), maxAltitude(maxAltitude), maxSpeed(maxSpeed),
           maxDistance(maxDistance) {}
 
+
 void AirTransport::printCharacteristics() {
     transportOperator.print();
     cout << "Air transport characteristics: " << endl;

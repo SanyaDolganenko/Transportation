@@ -17,7 +17,9 @@ public:
 
     AirTransport(Operator pilot, int passengersCount, int maxAltitude, int maxSpeed, int maxDistance);
 
-    void printCharacteristics();
+//    virtual void printCharacteristics() override;
+
+    void printCharacteristics() override;
 
 };
 
