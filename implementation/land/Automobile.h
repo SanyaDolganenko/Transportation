@@ -15,9 +15,13 @@ public:
     int numberOfWheels;
     int engineHorsePower;
 
-    Automobile(const Operator driver, int passengersCount, char *transportName, int fuelLiters, int maxRange,
+    Automobile(Operator driver, int passengersCount, char *transportName, int fuelLiters, int maxRange,
                int numberOfWheels,
                int engineHorsePower);
+
+    void drive(Route route) override;
+
+    void printCharacteristics() override;
 };
 
 
