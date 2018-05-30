@@ -22,20 +22,13 @@ void Plane::fly(Route route) {
     printCharacteristics();
 }
 
-Plane::Plane(Pilot pilot, int flightNumber, int passengersCount, int maxAltitude, int maxSpeed, int maxDistance)
+Plane::Plane(Operator pilot, int flightNumber, int passengersCount, int maxAltitude, int maxSpeed, int maxDistance)
         : AirTransport(
         pilot,
         passengersCount,
         maxAltitude, maxSpeed,
         maxDistance) {
     this->flightNumber = flightNumber;
-}
-
-void Plane::printCharacteristics() {
-    AirTransport::printCharacteristics();
-    printf("Your pilot was %s. He has over %d years of flying experience",
-           AirTransport::getTransportOperator().name,
-           AirTransport::getTransportOperator().yearsExp);
 }
 
 

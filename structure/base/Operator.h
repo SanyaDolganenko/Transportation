@@ -12,6 +12,9 @@ public:
     int yearsExp;
 
     Operator(char *name, int yearsExp);
+
+
+    virtual void print();
 };
 
 

@@ -14,8 +14,6 @@ public:
     Operator transportOperator = Operator(nullptr, 0);
 
     Transport(Operator transportOperator, int passengersCount);
-
-    virtual Operator getTransportOperator();
 };
 
 

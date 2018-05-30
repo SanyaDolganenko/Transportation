@@ -14,7 +14,7 @@ int main() {
     stops.push_back(initialStop);
     stops.push_back(destinationStop);
     Route route(stops, 180);
-    Pilot planePilot("Oleksandr", 12);
+    Operator planePilot("Oleksandr", 12);
     Plane plane(planePilot, 1234, 200, 10000, 900, 20000);
     plane.fly(route);
 //    plane.fly()
