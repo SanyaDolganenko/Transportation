@@ -28,7 +28,6 @@ void Automobile::drive(Route route) {
         index++;
     }
     cout << "Our journey has ended." << endl;
-    printCharacteristics();
 }
 
 void Automobile::printCharacteristics() {

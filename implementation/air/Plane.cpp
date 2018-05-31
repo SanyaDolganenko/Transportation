@@ -19,7 +19,6 @@ void Plane::fly(Route route) {
         index++;
     }
     cout << "Our journey has ended." << endl;
-    printCharacteristics();
 }
 
 Plane::Plane(Operator pilot, int flightNumber, int passengersCount, int maxAltitude, int maxSpeed, int maxDistance)

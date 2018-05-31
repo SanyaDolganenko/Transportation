@@ -6,8 +6,31 @@
 #include "implementation/air/Plane.h"
 #include "vector";
 #include "implementation/land/Automobile.h"
+#include "implementation/hybrid/FlyingCar.h"
 
 using namespace std;
+
+void demoHybridCar() {
+    cout << endl << endl << "Hybrid demo" << endl;
+    vector<Stop>
+            stopsFlying;
+    Stop initialStop(123421, 124214, "Odessa");
+    Stop destinationStop(92414, 841294, "Kiev");
+    stopsFlying.push_back(initialStop);
+    stopsFlying.push_back(destinationStop);
+    Route flyingRoute(stopsFlying, 180);
+
+    vector<Stop> stopsDriving;
+    Stop initialDriveStop(123421, 124214, "Kiev");
+    Stop destinationDriveStop(92414, 841294, "Kharkov");
+    stopsDriving.push_back(initialDriveStop);
+    stopsDriving.push_back(destinationDriveStop);
+    Route drivingRoute(stopsFlying, 180);
+
+    Operator planePilot("Cool pilot", 12);
+    FlyingCar hybrid(planePilot, 1234, 5, 4000, 500, 500, "Super hybrid Nissan", 200, 400, 4, 1000);
+    hybrid.startTrip(flyingRoute, drivingRoute);
+}
 
 int main() {
     vector<Stop> stops;
@@ -20,6 +43,7 @@ int main() {
     Plane plane(planePilot, 1234, 200, 10000, 900, 20000);
     cout << "Plane" << endl;
     plane.fly(route);
+    plane.printCharacteristics();
 
     cout << endl << endl << "Automobile" << endl;
 
@@ -29,6 +53,8 @@ int main() {
     Operator autoDriver("Boris", 15);
     Automobile automobile(autoDriver, 10, "Toyota Yaris", 100, 500, 4, 500);
     automobile.drive(autoRoute);
+    automobile.printCharacteristics();
+    demoHybridCar();
 
     return 0;
 }
