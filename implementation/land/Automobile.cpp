@@ -35,3 +35,6 @@ void Automobile::printCharacteristics() {
     cout << "This automobile has " << fuelLiters << " liters of fuel.\nMax range is " << maxRange << "km.\nIt has "
          << numberOfWheels << " wheels and " << engineHorsePower << "horse power";
 }
+
+void Automobile::printEngineType() {
+}

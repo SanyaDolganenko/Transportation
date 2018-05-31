@@ -40,10 +40,11 @@ int main() {
     stops.push_back(destinationStop);
     Route route(stops, 180);
     Operator planePilot("Oleksandr", 12);
-    Plane plane(planePilot, 1234, 200, 10000, 900, 20000);
+    Plane *plane = new Plane(planePilot, 1234, 200, 10000, 900, 20000);
     cout << "Plane" << endl;
-    plane.fly(route);
-    plane.printCharacteristics();
+//    plane->fly(route);
+    plane->printCharacteristics();
+
 
     cout << endl << endl << "Automobile" << endl;
 

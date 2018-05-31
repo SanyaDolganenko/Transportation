@@ -11,15 +11,17 @@
 #include "../air/Plane.h"
 #include "../land/Automobile.h"
 
-class FlyingCar : public Plane, public Automobile {
+class FlyingCar : virtual public Plane, virtual public Automobile {
 public:
     FlyingCar(const Operator &pilot, int flightNumber, int passengersCount, int maxAltitude, int maxSpeed,
               int maxDistance, char *transportName, int fuelLiters,
               int maxRange, int numberOfWheels, int engineHorsePower);
 
-    void printCharacteristics() override;
+    void printCharacteristics();
 
     void startTrip(Route flyingRoute, Route drivingRoute);
+
+    void printEngineType() override;
 
 };
 

@@ -19,7 +19,9 @@ public:
 
 //    virtual void printCharacteristics() override;
 
-    void printCharacteristics() override;
+    void printCharacteristics();
+
+    void printEngineType() override;
 
 };
 

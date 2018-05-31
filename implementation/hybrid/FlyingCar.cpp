@@ -27,3 +27,7 @@ FlyingCar::FlyingCar(const Operator &pilot, int flightNumber, int passengersCoun
                                                                                           transportName, fuelLiters,
                                                                                           maxRange, numberOfWheels,
                                                                                           engineHorsePower) {}
+
+void FlyingCar::printEngineType() {
+    Plane::printEngineType();
+}

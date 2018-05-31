@@ -30,4 +30,8 @@ Plane::Plane(Operator pilot, int flightNumber, int passengersCount, int maxAltit
     this->flightNumber = flightNumber;
 }
 
+void Plane::printEngineType() {
+    cout << "This plane engine type is propeller based." << endl;
+}
+
 

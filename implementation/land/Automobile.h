@@ -21,7 +21,9 @@ public:
 
     void drive(Route route) override;
 
-    void printCharacteristics() override;
+    void printCharacteristics();
+
+    void printEngineType() override;
 };
 
 

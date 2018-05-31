@@ -15,7 +15,9 @@ public:
 
     Transport(Operator transportOperator, int passengersCount);
 
-    virtual void printCharacteristics() = 0;
+    void printCharacteristics();
+
+    virtual void printEngineType() = 0;
 };
 
 

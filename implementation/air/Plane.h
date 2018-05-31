@@ -17,8 +17,11 @@ public:
 
     void fly(Route route) override;
 
+    virtual void printEngineType();
+
 private:
     int flightNumber;
+
 
 };
 

@@ -21,3 +21,7 @@ void AirTransport::printCharacteristics() {
            maxAltitude,
            maxSpeed, maxDistance);
 }
+
+void AirTransport::printEngineType() {
+    cout << "This abstract engine type is jet based." << endl;
+}
